@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>list</title>
+<head>
+<body>
+<h1 align=center>Animals</h1>
+<ol>
+<li>Cat</li>
+<li>Dog</li>
+<li>Lion</li>
+<li>Tiger</li>
+</ul>
+</body>
+</html>
