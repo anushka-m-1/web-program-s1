@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+</head>
+<body>
+<form>
+  <fieldset>
+    <legend>1. What does HTML stand for?</legend>
+    <h3><input type="radio" name="q1" value="A"> HyperText Markup Language</h3>
+    <h3><input type="radio" name="q1" value="B"> HyperText Mark Language</h3>
+    <h3><input type="radio" name="q1" value="C"> HyperText Make Language</h3>
+  </fieldset>
+
+  <fieldset>
+    <legend>2. Which HTML element is used to define the root of an HTML document?</legend>
+    <h3><input type="radio" name="q2" value="A"> html</h3>
+    <h3><input type="radio" name="q2" value="B"> p</h3>
+    <h3><input type="radio" name="q2" value="C"> body</h3>
+  </fieldset>
+
+  <fieldset>
+    <legend>3. Which tag is used to define the body of an HTML document?</legend>
+    <h3><input type="radio" name="q3" value="A"> html</h3>
+    <h3><input type="radio" name="q3" value="B"> body</h3>
+    <h3><input type="radio" name="q3" value="C"> head</h3>
+  </fieldset>
+
+  <button type="button" onclick="calculateScore()">Check Score</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function calculateScore() {
+  const answers = {
+    q1: "A",
+    q2: "A",
+    q3: "B"
+  };
+
+  let score = 0;
+
+  for (let key in answers) {
+    const selected = document.querySelector('input[name="' + key + '"]:checked');
+    if (selected && selected.value === answers[key]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerText = "Your score is " + score + " out of 3";
+}
+</script>
+
+</body>
+</html>
+
